@@ -1,0 +1,83 @@
+@import 'variable';
+@import 'reset';
+@import 'animation';
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: $bg-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+//=====================================
+// style box images
+.box {
+  position: relative;
+  width: $box-size;
+  height: $box-size;
+  transform-style: preserve-3d;
+  animation: ani1 8s linear infinite;
+  &:hover span {
+    transform: rotateY(calc(90deg * var(--i))) translateZ(180px);
+    transition: $transition-box-hover;
+  }
+  div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      transform: rotateY(calc(90deg * var(--i))) translateZ(150px);
+      overflow: hidden;
+      transition: $transition-box-hover;
+      &:before {
+        content: '';
+        position: absolute;
+        top: -80px;
+        left: -80px;
+        width: 160%;
+        height: 160%;
+        background: $background-image;
+        animation: ani2 5s linear infinite;
+        z-index: -1;
+      }
+      img {
+        width: 100%;
+        object-fit: contain;
+        object-position: $image-position;
+      }
+    }
+    &.top {
+      position: absolute;
+      top: -150px;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-position: center top;
+      background-size: cover;
+      transform: rotateZ(85deg) rotateY(90deg) rotateX(-5deg) scaleX(-1);
+    }
+    &.bottom {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-position: center top;
+      background-size: cover;
+      transform: rotateZ(85deg) rotateY(90deg) rotateX(-5deg) scaleX(-1);
+      filter: blur(2px);
+      box-shadow: $box-shadow;
+    }
+  }
+}
+//=====================================
+// end box images
