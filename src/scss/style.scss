@@ -108,6 +108,11 @@ body {
 //=====================================
 // heart
 #heart {
+  margin: 200px auto 0;
+  canvas{
+    width: 100% !important;
+    height: auto !important;
+  }
 }
 
 .container {

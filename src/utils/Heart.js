@@ -18,7 +18,7 @@ function HeartBase(width, height) {
 
   renderer.setSize(width, height);
 
-  camera.position.z = 1.8;
+  camera.position.z = 1;
 
   const controls = new TrackballControls(camera, renderer.domElement);
   controls.noPan = true;
