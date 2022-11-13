@@ -6,8 +6,8 @@ export default class MP3 extends React.Component {
   link;
   constructor(props) {
     super(props);
-    this.autoPlay = props.autoPlay;
-    this.autoReplay = props.autoReplay;
+    this.autoPlay = props.autoPlay ?? true;
+    this.autoReplay = props.autoReplay ?? true;
     this.link = props.link;
   }
   render() {
