@@ -5,10 +5,13 @@ let linkMP3 = '/anh-yeu-em-cuc.mp3';
 
 function App() {
   return (
-    <div>
+    <div className="container">
       <MP3 link={linkMP3} />
-      {/* <Box /> */}
-      <Heart width={'auto'} height={'auto'} />
+
+      <h2 className="typing">I LOVE YOU PẶC PẶC...</h2>
+
+      <Box />
+      <Heart width={'500'} height={'500'} />
     </div>
   );
 }
