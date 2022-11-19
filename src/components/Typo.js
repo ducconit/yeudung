@@ -23,7 +23,6 @@ export default function Typo() {
           let result = text.slice(0, i);
           setTyping(result);
           if (i === text.length) {
-            console.log(result);
             setText((text) => randomText());
           }
         }, 98 * i);
